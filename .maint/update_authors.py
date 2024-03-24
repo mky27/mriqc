@@ -3,7 +3,6 @@
 import json
 import sys
 from pathlib import Path
-
 import click
 from fuzzywuzzy import fuzz, process
 
@@ -54,6 +53,7 @@ def read_md_table(md_text):
         retval.append({k: v for k, v in zip(keys, values) if v})
 
     return retval
+
 
 
 def sort_contributors(entries, git_lines, exclude=None, last=None):
@@ -312,7 +312,7 @@ def publication(
         )
     )
 
-
+# Main entry point
 if __name__ == '__main__':
     """ Install entry-point """
     cli()
